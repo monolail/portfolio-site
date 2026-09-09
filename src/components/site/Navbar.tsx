@@ -33,7 +33,7 @@ export function Navbar() {
           href="#home"
           className="font-display text-lg font-bold tracking-tight text-foreground"
         >
-          Hojun<span className="text-gradient">.dev</span>
+          mono<span className="text-gradient">.dev</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
