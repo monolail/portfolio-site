@@ -27,10 +27,9 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="glow-card rounded-2xl p-7 hover:glow-card-hover"
+                className="lab-card p-7 lab-card-hover"
               >
-                <span className="btn-neon flex size-11 items-center justify-center rounded-xl">
+                <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
                   <Icon className="size-5" />
                 </span>
                 <h3 className="font-display mt-6 text-lg font-semibold">{card.title}</h3>

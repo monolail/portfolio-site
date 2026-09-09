@@ -9,8 +9,7 @@ export function Projects() {
   const { t } = useLanguage();
 
   return (
-    <section id="projects" className="relative py-24 md:py-32">
-      <div className="grid-glow absolute inset-0" aria-hidden="true" />
+    <section id="projects" className="relative py-24 md:py-32 bg-secondary/30">
       <div className="relative mx-auto max-w-6xl px-5">
         <p className="font-display text-xs tracking-[0.3em] text-primary uppercase">
           {t.projects.kicker}
@@ -30,14 +29,14 @@ export function Projects() {
               className="grid items-center gap-8 md:grid-cols-2 md:gap-14"
             >
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                <div className="glow-card overflow-hidden rounded-2xl">
+                <div className="lab-card overflow-hidden">
                   <img
                     src={images[i]}
                     alt={p.title}
                     loading="lazy"
                     width={1280}
                     height={900}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
               </div>

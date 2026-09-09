@@ -25,7 +25,7 @@ export function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled ? "glass-panel border-b py-3" : "border-b border-transparent py-5"
+        scrolled ? "bg-white/90 backdrop-blur-md border-b shadow-sm py-3" : "border-b border-transparent py-5"
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-5">
@@ -33,7 +33,7 @@ export function Navbar() {
           href="#home"
           className="font-display text-lg font-bold tracking-tight text-foreground"
         >
-          mono<span className="text-gradient">.dev</span>
+          mono<span className="text-primary">.dev</span>
         </a>
 
         <ul className="hidden items-center gap-8 md:flex">
@@ -41,7 +41,7 @@ export function Navbar() {
             <li key={l.id}>
               <a
                 href={`#${l.id}`}
-                className="relative text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="relative text-sm text-muted-foreground transition-colors hover:text-primary font-medium"
               >
                 {t.nav[l.key]}
               </a>
@@ -54,12 +54,12 @@ export function Navbar() {
             type="button"
             onClick={toggle}
             aria-label="Toggle language"
-            className="relative flex h-9 w-[92px] items-center rounded-full border border-border bg-secondary/60 p-1 text-xs font-semibold"
+            className="relative flex h-9 w-[92px] items-center rounded-full border border-border bg-muted/60 p-1 text-xs font-semibold"
           >
             <motion.span
               layout
               transition={{ type: "spring", stiffness: 420, damping: 32 }}
-              className="btn-neon absolute h-7 w-[42px] rounded-full"
+              className="absolute h-7 w-[42px] rounded-full bg-primary shadow-sm"
               style={{ left: lang === "ko" ? 4 : 46 }}
             />
             <span
@@ -91,7 +91,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="glass-panel mt-3 overflow-hidden md:hidden"
+            className="bg-white/90 backdrop-blur-md border border-border mt-3 overflow-hidden rounded-xl md:hidden shadow-sm"
           >
             {links.map((l) => (
               <li key={l.id} className="border-b last:border-b-0">

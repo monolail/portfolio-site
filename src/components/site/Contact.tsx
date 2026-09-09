@@ -26,23 +26,24 @@ export function Contact() {
     "w-full rounded-xl border border-input bg-secondary/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/40 focus:outline-none transition";
 
   return (
-    <section id="contact" className="relative py-24 md:py-32">
-      <div className="mx-auto max-w-6xl px-5">
+    <section id="contact" className="relative py-24 md:py-32 bg-accent text-white">
+      <div className="absolute inset-0 pattern-bg opacity-30" aria-hidden="true" />
+      <div className="relative mx-auto max-w-6xl px-5">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
-          className="glow-card grid gap-12 rounded-3xl p-8 md:grid-cols-2 md:p-14"
+          className="grid gap-12 md:grid-cols-2 md:p-14"
         >
           <div>
-            <p className="font-display text-xs tracking-[0.3em] text-primary uppercase">
+            <p className="font-display text-xs tracking-[0.3em] text-white/70 uppercase">
               {t.contact.kicker}
             </p>
-            <h2 className="font-display mt-4 text-2xl leading-snug font-bold tracking-tight sm:text-3xl">
+            <h2 className="font-display mt-4 text-2xl leading-snug font-bold tracking-tight sm:text-3xl text-white">
               {t.contact.title}
             </h2>
-            <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-5 text-sm leading-relaxed text-white/80">
               {t.contact.desc}
             </p>
             <div className="mt-8 flex gap-3">
@@ -57,7 +58,7 @@ export function Contact() {
                   target={href.startsWith("http") ? "_blank" : undefined}
                   rel="noreferrer"
                   aria-label={label}
-                  className="glass-panel flex size-11 items-center justify-center rounded-xl text-muted-foreground transition-colors hover:text-primary"
+                  className="flex size-11 items-center justify-center rounded-xl bg-white/10 text-white/80 transition-colors hover:bg-primary hover:text-white"
                 >
                   <Icon className="size-5" />
                 </a>
@@ -89,20 +90,20 @@ export function Contact() {
               type="submit"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="btn-neon w-full rounded-xl px-6 py-3.5 text-sm"
+              className="btn-primary w-full rounded-xl px-6 py-3.5 text-sm"
             >
               {t.contact.send}
             </motion.button>
             {status !== "idle" && (
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-white/70">
                 {status === "sent" ? t.contact.sent : t.contact.invalid}
               </p>
             )}
           </form>
         </motion.div>
 
-        <footer className="mt-12 flex flex-col items-center justify-between gap-3 text-xs text-muted-foreground sm:flex-row">
-          <span className="font-display">Hojun.dev</span>
+        <footer className="mt-12 flex flex-col items-center justify-between gap-3 text-xs text-white/60 sm:flex-row border-t border-white/10 pt-8">
+          <span className="font-display">mono.dev</span>
           <span>{t.footer}</span>
           <span>© {new Date().getFullYear()} 이호준 (Hojun Lee)</span>
         </footer>
