@@ -47,20 +47,20 @@ export const dictionaries: Record<Lang, Dict> = {
       cta: "커피챗 제안하기 (Let's Talk)",
     },
     about: {
-      kicker: "About Me",
-      title: "저를 설명하는 세 가지 축",
+      kicker: "Projects",
+      title: "주요 프로젝트",
       cards: [
         {
-          title: "데이터 기반 의사결정",
-          body: "ADsP, SQLD, Google Analytics 자격 및 금융 데이터 분석(FinDA) 경험을 바탕으로, 단순한 기능 구현을 넘어 비즈니스 임팩트를 고려하는 개발을 추구합니다.",
+          title: "개발자 행동 모니터링 시스템",
+          body: "IDE 로그 데이터를 수집하여 개발자 생산성을 분석하는 VS Code 확장 프로그램. 문제 정의부터 프레임워크 구축까지 주도.",
         },
         {
-          title: "개발자 경험(DX) 최적화",
-          body: "개발자의 생산성을 고민합니다. VS Code 확장 프로그램을 개발해 타이핑 속도와 에러 해결 시간 등 행동 지표를 수집하고 분석하는 시스템을 구축한 경험이 있습니다.",
+          title: "오픈 데이터 금융 분석",
+          body: "OPEN DART 및 AI Hub 공시 데이터를 활용한 실무 중심의 파이프라인 구축 및 분석 프로젝트.",
         },
         {
-          title: "인문학적 통찰과 끈기",
-          body: "알고리즘 대회(LGCPC)를 준비하는 논리력과 더불어, 평소 철학과 역사 문헌을 탐구하며 기술이 향해야 할 방향과 사용자 중심의 근본적인 문제 해결 능력을 기릅니다.",
+          title: "AI 브랜드 모니터링 파이프라인",
+          body: "썸트렌드 MCP와 LLM을 결합하여 매주 자동으로 브랜드 여론 및 최신 기술 트렌드를 분석하는 파이프라인 구축.",
         },
       ],
     },
@@ -102,20 +102,20 @@ export const dictionaries: Record<Lang, Dict> = {
       cta: "Let's Talk",
     },
     about: {
-      kicker: "About Me",
-      title: "Three axes that define how I build",
+      kicker: "Projects",
+      title: "Featured Projects",
       cards: [
         {
-          title: "Data-Driven Decisions",
-          body: "Backed by ADsP, SQLD, GA certifications and Financial Data Analysis experience, I build features that drive true business impact.",
+          title: "Developer Behavior Monitoring System",
+          body: "A VS Code extension that collects log data inside the IDE to monitor developer productivity metrics. Led everything from problem definition to framework creation.",
         },
         {
-          title: "Developer Experience (DX)",
-          body: "Passionate about productivity. Built a VS Code extension to track developer behavior metrics like typing speed and error resolution times.",
+          title: "Financial Analysis with Open Data",
+          body: "Built practice-oriented data pipelines using corporate disclosure data and AI Hub datasets through the Big Data & AI union (BDAI).",
         },
         {
-          title: "Humanistic Insight",
-          body: "Combining algorithmic logic (LGCPC participant) with deep reading in history and philosophy to approach technical problems with a human-centric mindset.",
+          title: "AI Brand Monitoring Pipeline",
+          body: "Automated pipeline combining Sometrend MCP and LLMs to analyze brand sentiment and latest tech trends weekly.",
         },
       ],
     },

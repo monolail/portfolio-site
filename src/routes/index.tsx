@@ -35,7 +35,6 @@ function Index() {
         <Navbar />
         <Hero />
         <About />
-        <Projects />
         <Contact />
       </main>
     </LanguageProvider>

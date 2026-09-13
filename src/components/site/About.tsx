@@ -8,7 +8,7 @@ export function About() {
   const { t } = useLanguage();
 
   return (
-    <section id="about" className="relative py-24 md:py-32">
+    <section id="projects" className="relative py-24 md:py-32">
       <div className="mx-auto max-w-6xl px-5">
         <p className="font-display text-xs tracking-[0.3em] text-primary uppercase">
           {t.about.kicker}
