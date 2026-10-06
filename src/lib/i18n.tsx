@@ -10,12 +10,17 @@ import {
 export type Lang = "ko" | "en";
 
 type Dict = {
-  nav: { home: string; about: string; projects: string; contact: string };
+  nav: { home: string; about: string; projects: string; studying: string; contact: string };
   hero: { headline: string; sub: string; cta: string; badge: string };
   about: {
     kicker: string;
     title: string;
     cards: { title: string; body: string }[];
+  };
+  studying: {
+    kicker: string;
+    title: string;
+    items: { title: string; body: string }[];
   };
   projects: {
     kicker: string;
@@ -38,7 +43,7 @@ type Dict = {
 
 export const dictionaries: Record<Lang, Dict> = {
   ko: {
-    nav: { home: "홈", about: "소개", projects: "프로젝트", contact: "연락처" },
+    nav: { home: "홈", about: "소개", projects: "프로젝트", studying: "학습", contact: "연락처" },
     hero: {
       badge: "경희대학교 소프트웨어학과 · 데이터 기반 개발자",
       headline:
@@ -61,6 +66,24 @@ export const dictionaries: Record<Lang, Dict> = {
         {
           title: "AI 브랜드 모니터링 파이프라인",
           body: "썸트렌드 MCP와 LLM을 결합하여 매주 자동으로 브랜드 여론 및 최신 기술 트렌드를 분석하는 파이프라인 구축.",
+        },
+      ],
+    },
+    studying: {
+      kicker: "Currently Studying",
+      title: "현재 깊게 탐구하고 있는 기술",
+      items: [
+        {
+          title: "FastAPI",
+          body: "비동기 기반의 빠르고 현대적인 Python 웹 프레임워크 학습 및 고성능 백엔드 API 서버 구축 연습.",
+        },
+        {
+          title: "Rust",
+          body: "메모리 안전성과 고성능을 보장하는 시스템 프로그래밍 언어. 소유권 모델과 안전한 동시성 제어 학습 중.",
+        },
+        {
+          title: "Java",
+          body: "객체 지향 프로그래밍의 기초부터 JVM 아키텍처, Spring 생태계까지 탄탄한 백엔드 기본기 다지기.",
         },
       ],
     },
@@ -94,7 +117,7 @@ export const dictionaries: Record<Lang, Dict> = {
     footer: "논리와 데이터로 설계합니다.",
   },
   en: {
-    nav: { home: "Home", about: "About", projects: "Projects", contact: "Contact" },
+    nav: { home: "Home", about: "About", projects: "Projects", studying: "Studying", contact: "Contact" },
     hero: {
       badge: "Kyung Hee University · Data-driven engineer",
       headline: "I don't code by intuition. I prove user experience with data.",
@@ -116,6 +139,24 @@ export const dictionaries: Record<Lang, Dict> = {
         {
           title: "AI Brand Monitoring Pipeline",
           body: "Automated pipeline combining Sometrend MCP and LLMs to analyze brand sentiment and latest tech trends weekly.",
+        },
+      ],
+    },
+    studying: {
+      kicker: "Currently Studying",
+      title: "Technologies I'm exploring deeply",
+      items: [
+        {
+          title: "FastAPI",
+          body: "Learning the modern, fast, async-based Python web framework to build high-performance backend API servers.",
+        },
+        {
+          title: "Rust",
+          body: "Diving into systems programming with guaranteed memory safety and performance, mastering ownership and concurrency.",
+        },
+        {
+          title: "Java",
+          body: "Strengthening fundamental backend engineering skills, from object-oriented programming to JVM architecture and the Spring ecosystem.",
         },
       ],
     },

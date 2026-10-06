@@ -6,6 +6,7 @@ import { useLanguage } from "@/lib/i18n";
 const links = [
   { id: "home", key: "home" as const },
   { id: "projects", key: "projects" as const },
+  { id: "studying", key: "studying" as const },
   { id: "contact", key: "contact" as const },
 ];
 

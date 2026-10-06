@@ -3,6 +3,7 @@ import { LanguageProvider } from "@/lib/i18n";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
+import { Studying } from "@/components/site/Studying";
 import { Projects } from "@/components/site/Projects";
 import { Contact } from "@/components/site/Contact";
 
@@ -35,6 +36,7 @@ function Index() {
         <Navbar />
         <Hero />
         <About />
+        <Studying />
         <Contact />
       </main>
     </LanguageProvider>
