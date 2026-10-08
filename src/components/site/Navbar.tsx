@@ -54,7 +54,7 @@ export function Navbar() {
               rel="noreferrer"
               className="relative flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary font-medium"
             >
-              {lang === "ko" ? "블로그" : "Blog"}
+              {lang === "ko" ? "테크 블로그" : "Tech Blog"}
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
           </li>
@@ -122,7 +122,7 @@ export function Navbar() {
                 rel="noreferrer"
                 className="flex items-center gap-2 px-6 py-4 text-sm text-muted-foreground"
               >
-                {lang === "ko" ? "블로그" : "Blog"}
+                {lang === "ko" ? "테크 블로그" : "Tech Blog"}
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
               </a>
             </li>
