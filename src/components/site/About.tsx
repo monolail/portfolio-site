@@ -36,6 +36,18 @@ export function About() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {card.body}
                 </p>
+                {card.link && (
+                  <div className="mt-6">
+                    <a
+                      href={card.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                    >
+                      View Repository &rarr;
+                    </a>
+                  </div>
+                )}
               </motion.article>
             );
           })}

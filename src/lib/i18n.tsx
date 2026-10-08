@@ -15,7 +15,7 @@ type Dict = {
   about: {
     kicker: string;
     title: string;
-    cards: { title: string; body: string }[];
+    cards: { title: string; body: string; link?: string }[];
   };
   studying: {
     kicker: string;
@@ -58,14 +58,17 @@ export const dictionaries: Record<Lang, Dict> = {
         {
           title: "개발자 행동 모니터링 시스템",
           body: "IDE 로그 데이터를 수집하여 개발자 생산성을 분석하는 VS Code 확장 프로그램. 문제 정의부터 프레임워크 구축까지 주도.",
+          link: "https://github.com/monolail",
         },
         {
           title: "오픈 데이터 금융 분석",
           body: "OPEN DART 및 AI Hub 공시 데이터를 활용한 실무 중심의 파이프라인 구축 및 분석 프로젝트.",
+          link: "https://github.com/monolail/FINDA_1_MARKET-DATA",
         },
         {
           title: "AI 브랜드 모니터링 파이프라인",
           body: "썸트렌드 MCP와 LLM을 결합하여 매주 자동으로 브랜드 여론 및 최신 기술 트렌드를 분석하는 파이프라인 구축.",
+          link: "https://github.com/monolail",
         },
       ],
     },
@@ -131,14 +134,17 @@ export const dictionaries: Record<Lang, Dict> = {
         {
           title: "Developer Behavior Monitoring System",
           body: "A VS Code extension that collects log data inside the IDE to monitor developer productivity metrics. Led everything from problem definition to framework creation.",
+          link: "https://github.com/monolail",
         },
         {
           title: "Financial Analysis with Open Data",
           body: "Built practice-oriented data pipelines using corporate disclosure data and AI Hub datasets through the Big Data & AI union (BDAI).",
+          link: "https://github.com/monolail/FINDA_1_MARKET-DATA",
         },
         {
           title: "AI Brand Monitoring Pipeline",
           body: "Automated pipeline combining Sometrend MCP and LLMs to analyze brand sentiment and latest tech trends weekly.",
+          link: "https://github.com/monolail",
         },
       ],
     },
