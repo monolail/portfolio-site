@@ -47,6 +47,17 @@ export function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="https://velog.io/@second_ho_jun/posts"
+              target="_blank"
+              rel="noreferrer"
+              className="relative flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-primary font-medium"
+            >
+              {lang === "ko" ? "블로그" : "Blog"}
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </li>
         </ul>
 
         <div className="flex items-center gap-3">
@@ -104,6 +115,17 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="border-b last:border-b-0">
+              <a
+                href="https://velog.io/@second_ho_jun/posts"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center gap-2 px-6 py-4 text-sm text-muted-foreground"
+              >
+                {lang === "ko" ? "블로그" : "Blog"}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </li>
           </motion.ul>
         )}
       </AnimatePresence>
