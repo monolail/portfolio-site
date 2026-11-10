@@ -124,7 +124,7 @@ export function Hero() {
                   <Github className="size-4" /> GitHub
                 </a>
                 <a
-                  href="https://velog.io/@second_ho_jun/posts"
+                  href="https://velog.io/@second_ho_jun/series"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-1.5 hover:text-primary"
