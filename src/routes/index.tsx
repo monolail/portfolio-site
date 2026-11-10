@@ -4,19 +4,18 @@ import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
 import { Studying } from "@/components/site/Studying";
-import { Projects } from "@/components/site/Projects";
 import { Contact } from "@/components/site/Contact";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "이호준 | Hojun.dev — 데이터로 증명하는 개발자 포트폴리오" },
+      { title: "이호준 | Hojun Lee — 데이터 기반 개발자 포트폴리오" },
       {
         name: "description",
         content:
-          "경희대학교 소프트웨어학과 이호준의 포트폴리오. 로그 데이터와 알고리즘으로 병목을 해결하고 지속 가능한 아키텍처를 설계합니다.",
+          "경희대학교 소프트웨어융합학과 이호준의 포트폴리오. 로그 데이터와 알고리즘으로 병목을 해결하고 지속 가능한 아키텍처를 설계합니다.",
       },
-      { property: "og:title", content: "이호준 | Hojun.dev — Data-driven developer" },
+      { property: "og:title", content: "이호준 | Hojun Lee — Data-driven engineer" },
       {
         property: "og:description",
         content:

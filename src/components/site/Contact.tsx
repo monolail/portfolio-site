@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, BookOpen } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
-const EMAIL = "hojun.dev@example.com";
+const EMAIL = "minn0949@khu.ac.kr";
 
 export function Contact() {
   const { t } = useLanguage();
@@ -23,46 +23,64 @@ export function Contact() {
   };
 
   const field =
-    "w-full rounded-xl border border-input bg-secondary/40 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-ring/40 focus:outline-none transition";
+    "w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition";
 
   return (
-    <section id="contact" className="relative py-24 md:py-32 bg-accent text-white">
-      <div className="absolute inset-0 pattern-bg opacity-30" aria-hidden="true" />
-      <div className="relative mx-auto max-w-6xl px-5">
+    <section id="contact" className="bg-secondary py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
-          className="grid gap-12 md:grid-cols-2 md:p-14"
+          transition={{ duration: 0.5 }}
+          className="apple-card-white grid gap-12 p-8 sm:p-12 md:grid-cols-2"
         >
-          <div>
-            <p className="font-display text-xs tracking-[0.3em] text-white/70 uppercase">
-              {t.contact.kicker}
-            </p>
-            <h2 className="font-display mt-4 text-2xl leading-snug font-bold tracking-tight sm:text-3xl text-white">
-              {t.contact.title}
-            </h2>
-            <p className="mt-5 text-sm leading-relaxed text-white/80">
-              {t.contact.desc}
-            </p>
-            <div className="mt-8 flex gap-3">
-              {[
-                { href: "https://github.com/monolail", Icon: Github, label: "GitHub" },
-                { href: "https://linkedin.com", Icon: Linkedin, label: "LinkedIn" },
-                { href: `mailto:${EMAIL}`, Icon: Mail, label: "Email" },
-              ].map(({ href, Icon, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("http") ? "_blank" : undefined}
-                  rel="noreferrer"
-                  aria-label={label}
-                  className="flex size-11 items-center justify-center rounded-xl bg-white/10 text-white/80 transition-colors hover:bg-primary hover:text-white"
-                >
-                  <Icon className="size-5" />
+          <div className="flex flex-col justify-between">
+            <div>
+              <p className="text-xs font-semibold tracking-wider text-muted-foreground">
+                {t.contact.kicker}
+              </p>
+              <h2 className="font-display mt-1.5 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
+                {t.contact.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                {t.contact.desc}
+              </p>
+            </div>
+
+            <div className="mt-8 space-y-3 border-t border-border pt-6 text-sm">
+              <div className="flex items-center gap-3 text-foreground">
+                <Mail className="size-4 text-muted-foreground" />
+                <a href={`mailto:${EMAIL}`} className="font-medium hover:text-primary">
+                  {EMAIL}
                 </a>
-              ))}
+              </div>
+              <div className="flex items-center gap-4 pt-2">
+                <a
+                  href="https://github.com/monolail"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-primary"
+                >
+                  <Github className="size-4" /> GitHub
+                </a>
+                <a
+                  href="https://velog.io/@second_ho_jun/posts"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-primary"
+                >
+                  <BookOpen className="size-4" /> Velog
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/%ED%98%B8%EC%A4%80-%EC%9D%B4-6a515b3aa/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs font-medium text-muted-foreground hover:text-primary"
+                >
+                  <Linkedin className="size-4" /> LinkedIn
+                </a>
+              </div>
             </div>
           </div>
 
@@ -86,26 +104,24 @@ export function Contact() {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
             />
-            <motion.button
+            <button
               type="submit"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="btn-primary w-full rounded-xl px-6 py-3.5 text-sm"
+              className="w-full rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
             >
               {t.contact.send}
-            </motion.button>
+            </button>
             {status !== "idle" && (
-              <p className="text-xs text-white/70">
+              <p className="text-xs text-muted-foreground">
                 {status === "sent" ? t.contact.sent : t.contact.invalid}
               </p>
             )}
           </form>
         </motion.div>
 
-        <footer className="mt-12 flex flex-col items-center justify-between gap-3 text-xs text-white/60 sm:flex-row border-t border-white/10 pt-8">
-          <span className="font-display">mono.dev</span>
+        <footer className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-border pt-8 text-xs text-muted-foreground sm:flex-row">
+          <span className="font-display font-semibold text-foreground">Hojun Lab</span>
           <span>{t.footer}</span>
-          <span>© {new Date().getFullYear()} 이호준 (Hojun Lee)</span>
+          <span>© {new Date().getFullYear()} Hojun Lee. All rights reserved.</span>
         </footer>
       </div>
     </section>

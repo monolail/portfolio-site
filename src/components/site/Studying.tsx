@@ -1,49 +1,57 @@
 import { motion } from "motion/react";
-import { Server, Cpu, Coffee } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
-
-const icons = [Server, Cpu, Coffee];
 
 export function Studying() {
   const { t } = useLanguage();
 
   return (
-    <section id="studying" className="relative py-24 md:py-32 bg-secondary/30">
-      <div className="mx-auto max-w-6xl px-5">
-        <p className="font-display text-xs tracking-[0.3em] text-primary uppercase">
+    <section id="studying" className="bg-white py-20 md:py-28">
+      <div className="mx-auto max-w-6xl px-6">
+        <p className="text-xs font-semibold tracking-wider text-muted-foreground">
           {t.studying.kicker}
         </p>
-        <h2 className="font-display mt-4 text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl">
+        <h2 className="font-display mt-1.5 text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
           {t.studying.title}
         </h2>
+        <p className="mt-2 text-base text-muted-foreground sm:text-lg">
+          {t.studying.subtitle}
+        </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
           {t.studying.items.map((item, i) => {
-            const Icon = icons[i] ?? Server;
+            const indexLabel = String(i + 1).padStart(2, "0");
             return (
               <motion.article
                 key={item.title}
-                initial={{ opacity: 0, y: 28 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="lab-card p-7 lab-card-hover"
+                viewport={{ once: true, amount: 0.25 }}
+                transition={{ duration: 0.45, delay: i * 0.08 }}
+                className="apple-card-gray flex flex-col justify-between p-8 apple-card-hover"
               >
-                <span className="flex size-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                  <Icon className="size-5" />
-                </span>
-                <h3 className="font-display mt-6 text-lg font-semibold">{item.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {item.body}
-                </p>
-                <div className="mt-6">
+                <div>
+                  <span className="text-xs font-bold text-muted-foreground">
+                    {indexLabel}
+                  </span>
+                  <h3 className="font-display mt-3 text-xl font-bold tracking-tight text-foreground sm:text-2xl">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs font-medium text-muted-foreground sm:text-sm">
+                    {item.sub}
+                  </p>
+                  <p className="mt-3 text-xs leading-relaxed text-muted-foreground/90 sm:text-sm">
+                    {item.body}
+                  </p>
+                </div>
+
+                <div className="mt-10 flex items-center gap-5 pt-2">
                   <a
-                    href="https://github.com/monolail?tab=repositories"
+                    href={item.link}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-primary hover:underline sm:text-sm"
                   >
-                    View Repository &rarr;
+                    {item.linkText} <span aria-hidden="true">›</span>
                   </a>
                 </div>
               </motion.article>
