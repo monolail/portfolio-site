@@ -123,7 +123,7 @@ export const dictionaries: Record<Lang, Dict> = {
         {
           title: "개발자 행동 모니터링 시스템",
           body: "IDE 로그 데이터를 수집하여 개발자 생산성을 분석하는 VS Code 확장 프로그램. 문제 정의부터 프레임워크 구축까지 주도.",
-          link: "https://github.com/monolail",
+          link: "https://github.com/monolail/Applied_Data_Analysis",
           linkText: "레포지토리 보기",
         },
         {
@@ -251,7 +251,7 @@ export const dictionaries: Record<Lang, Dict> = {
         {
           title: "Developer Behavior Monitoring System",
           body: "A VS Code extension collecting IDE telemetry logs to quantify developer productivity. Led problem definition and framework design.",
-          link: "https://github.com/monolail",
+          link: "https://github.com/monolail/Applied_Data_Analysis",
           linkText: "View Repository",
         },
         {
