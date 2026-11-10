@@ -26,14 +26,14 @@ export function Contact() {
     "w-full rounded-xl border border-border bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:ring-2 focus:ring-primary/20 focus:outline-none transition";
 
   return (
-    <section id="contact" className="bg-secondary py-20 md:py-28">
+    <section id="contact" className="bg-white py-20 md:py-28">
       <div className="mx-auto max-w-6xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className="apple-card-white grid gap-12 p-8 sm:p-12 md:grid-cols-2"
+          className="apple-card-gray grid gap-12 p-8 sm:p-12 md:grid-cols-2"
         >
           <div className="flex flex-col justify-between">
             <div>

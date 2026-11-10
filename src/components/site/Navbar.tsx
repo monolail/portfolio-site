@@ -7,6 +7,7 @@ const links = [
   { id: "home", key: "home" as const },
   { id: "projects", key: "projects" as const },
   { id: "studying", key: "studying" as const },
+  { id: "blog", key: "blog" as const },
 ];
 
 export function Navbar() {
@@ -34,16 +35,6 @@ export function Navbar() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="https://velog.io/@second_ho_jun/posts"
-              target="_blank"
-              rel="noreferrer"
-              className="text-xs font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              {t.nav.blog}
-            </a>
-          </li>
         </ul>
 
         <div className="flex items-center gap-2.5">
@@ -93,16 +84,6 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="border-b border-border/60">
-              <a
-                href="https://velog.io/@second_ho_jun/posts"
-                target="_blank"
-                rel="noreferrer"
-                className="block px-6 py-3.5 text-sm text-foreground"
-              >
-                {t.nav.blog}
-              </a>
-            </li>
             <li>
               <a
                 href="#contact"

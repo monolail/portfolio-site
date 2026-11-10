@@ -61,6 +61,18 @@ type Dict = {
       linkText: string;
     }[];
   };
+  blogSection: {
+    kicker: string;
+    title: string;
+    subtitle: string;
+    items: {
+      title: string;
+      sub: string;
+      body: string;
+      link: string;
+      linkText: string;
+    }[];
+  };
   contact: {
     kicker: string;
     title: string;
@@ -156,6 +168,41 @@ export const dictionaries: Record<Lang, Dict> = {
         },
       ],
     },
+    blogSection: {
+      kicker: "Tech Blog",
+      title: "테크 블로그",
+      subtitle: "학습하고 고민한 흔적을 기록하는 아카이브 (Velog)",
+      items: [
+        {
+          title: "오픈소스 (Open Source)",
+          sub: "오픈소스 생태계 탐구 및 코드 기여 기록",
+          body: "다양한 오픈소스 프로젝트의 아키텍처와 내부 코드를 분석하고, 직접 이슈를 해결하며 배운 점들을 정리합니다.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "포스트 보기",
+        },
+        {
+          title: "자료구조 (Data Structure)",
+          sub: "알고리즘과 핵심 CS 구조적 이해",
+          body: "단순 암기가 아닌 메모리 구조와 시간·공간 복잡도 관점에서 자료구조와 알고리즘의 동작 원리를 깊게 파고듭니다.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "포스트 보기",
+        },
+        {
+          title: "회고록 (Retrospectives)",
+          sub: "프로젝트 및 엔지니어링 성장 회고",
+          body: "학부 연구, 대외활동(BDAI, Finda, LG Aimers 등), 프로젝트를 진행하며 겪은 시행착오와 기술적 성장을 기록합니다.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "포스트 보기",
+        },
+        {
+          title: "토이프로젝트 (Toy Projects)",
+          sub: "작은 문제 해결부터 프로토타이핑까지",
+          body: "일상 속 아이디어나 새로운 기술 스택을 빠르게 검증하기 위해 직접 설계하고 구현한 실험적 프로젝트 제작기입니다.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "포스트 보기",
+        },
+      ],
+    },
     contact: {
       kicker: "Contact",
       title: "연락하기",
@@ -246,6 +293,41 @@ export const dictionaries: Record<Lang, Dict> = {
           body: "Strengthening core backend engineering skills from OOP principles to JVM memory architecture and the Spring ecosystem.",
           link: "https://github.com/monolail?tab=repositories",
           linkText: "View Code",
+        },
+      ],
+    },
+    blogSection: {
+      kicker: "Tech Blog",
+      title: "Technical Writing",
+      subtitle: "Archive of engineering notes, CS fundamentals, and retrospectives on Velog",
+      items: [
+        {
+          title: "Open Source",
+          sub: "Exploring open-source ecosystems & contributions",
+          body: "Analyzing internal architectures of open-source projects and documenting lessons learned from resolving real-world issues.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "Read Posts",
+        },
+        {
+          title: "Data Structures",
+          sub: "Structural understanding of CS & algorithms",
+          body: "Deep-diving into data structures and algorithms from the perspective of memory layout and time/space complexity.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "Read Posts",
+        },
+        {
+          title: "Retrospectives",
+          sub: "Reflections on projects & engineering growth",
+          body: "Documenting trials, errors, and technical milestones across undergraduate research, BDAI, Finda, and LG Aimers.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "Read Posts",
+        },
+        {
+          title: "Toy Projects",
+          sub: "From small problem-solving to rapid prototyping",
+          body: "Build logs of experimental side projects designed to test new tech stacks and solve everyday problems.",
+          link: "https://velog.io/@second_ho_jun/posts",
+          linkText: "Read Posts",
         },
       ],
     },
